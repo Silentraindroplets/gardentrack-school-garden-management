@@ -2,6 +2,8 @@
 
 A website designed to help schools manage their gardening programs digitally. GreenTrack allows teachers to assign garden plots to students, while enabling students to record plant observations and monitor growth over time.
 
+**NOTE: Everything in this document is provisional!**
+
 ## Project Overview
 
 Many school gardening programs still rely on paper journals, which makes it difficult to keep observation records organized, track plant growth consistently, monitor multiple garden plots, and review student participation.
@@ -63,11 +65,11 @@ GreenTrack solves this by giving teachers a single place to manage and assign ga
 - Dynamic Table Updates
 - Event Listeners
 
-## Folder Structure
+## Folder Structure (Subject to CHANGE!)
 
-
+```
 greentrack/
-├── index.html                  # Landing page (entry point)
+├── index.html                  # Login page (entry point)
 │
 ├── student/
 │   ├── dashboard.html          # Student Dashboard
@@ -84,7 +86,14 @@ greentrack/
 │   ├── login.css
 │   ├── student.css
 │   └── admin.css
-|
+│
+├── js/
+│   ├── auth.js                 # Login validation + logout
+│   ├── observations.js         # Add / display observation history
+│   ├── plots.js                # Assign garden plot / update plant status
+│   ├── nav.js                  # Responsive nav toggle behavior
+│   └── data.js                 # Shared mock data / localStorage helpers (CRUD)
+│
 ├── assets/
 │   ├── images/                 # Logos, icons, plant photos
 │   └── fonts/                  # Custom fonts, if any
@@ -93,17 +102,18 @@ greentrack/
 ```
 
 
-
 ## Team
 
-MOIST INC. — BSIT 2A, Group 3
-IT 212 – HCI 2 (Elect 1)
+**MOIST INC.** — BSIT 2A, Group 3
+**IT 212 – HCI 2 (Elect 1)**
 Instructor: Mr. Moses Jireh A. Lozano
 Misamis Oriental Institute of Science and Technology Inc.
 
 | Name | Role |
+|---|---|
 | Felix Cagampang | Project Manager / Lead Designer |
 | Jeff Gabriel Embate | Lead Front-End Developer (HTML/CSS) |
 | Rutche Rahinao | JavaScript Developer (Logic/Interactivity) |
 | Spike Capoquian | JavaScript Developer (Logic/Interactivity) |
 | Jael Camocamo | QA Tester / Content Creator |
+
