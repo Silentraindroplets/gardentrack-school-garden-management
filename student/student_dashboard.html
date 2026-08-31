@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Student Dashboard - GreenTrack</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+  <div class="app-shell">
+
+    <aside class="sidebar">
+      <div class="sidebar__logo">🌱 GardenTrack</div>
+
+      <div class="sidebar__section-label">Overview</div>
+      <a href="student_dashboard.html" class="sidebar__link is-active">Dashboard</a>
+
+      <div class="sidebar__section-label">Management</div>
+      <a href="my_plot.html" class="sidebar__link">My Garden Plot</a>
+      <a href="observations.html" class="sidebar__link">Observations</a>
+
+      <a href="../home.html" class="sidebar__link sidebar__signout">Sign Out</a>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <span class="topbar__title">Student Portal</span>
+        <span class="topbar__user">👤 Student</span>
+      </div>
+
+      <section class="panel panel--welcome">
+        <div>
+          <p class="eyebrow">Sunday, December 15, 2024</p>
+          <h2>Welcome back, Student!</h2>
+          <p style="margin:0;">Your lettuces are doing great! Don't forget today's observation.</p>
+        </div>
+        <a href="observations.html" class="btn-primary">Daily Observation</a>
+      </section>
+
+      <section class="stat-cards">
+        <div class="stat-card">
+          <div class="stat-card__label">Assigned Plot</div>
+          <div class="stat-card__value">A1</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Plant</div>
+          <div class="stat-card__value">Lettuce</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-card__label">Last Observation</div>
+          <div class="stat-card__value">Yesterday</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h3 class="panel__title">Height Progress</h3>
+        <div class="chart-placeholder">📈 Growth chart will render here once JS is wired up</div>
+      </section>
+
+      <section class="panel">
+        <h3 class="panel__title">Upcoming Assigned Schedules</h3>
+        <ul>
+          <li>December 28, 2024 — Photography Day</li>
+          <li>January 12, 2025 — Fertilize Plot</li>
+        </ul>
+      </section>
+    </main>
+
+  </div>
+
+</body>
+</html>
