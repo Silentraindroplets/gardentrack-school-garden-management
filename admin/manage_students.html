@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Manage Plots | Garden Plot</title>
+    <title>Manage Students | Garden Plot</title>
 
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
@@ -26,11 +26,11 @@
           </li>
 
           <li>
-            <a href="manage_plots.html" class="active"> Manage Plots </a>
+            <a href="manage_plots.html"> Manage Plots </a>
           </li>
 
           <li>
-            <a href="manage_students.html"> Students </a>
+            <a href="manage_students.html" class="active"> Students </a>
           </li>
 
           <li>
@@ -61,51 +61,13 @@
     <main class="main-content">
       <div class="container">
         <div class="page-header">
-          <h1>Manage Garden Plots</h1>
+          <h1>Manage Students</h1>
 
-          <p>Assign and manage student garden plots.</p>
+          <p>View and manage registered student information.</p>
         </div>
 
         <section class="card">
-          <h2>Assign Garden Plot</h2>
-
-          <br />
-
-          <form>
-            <div class="form-group">
-              <label for="student"> Student </label>
-
-              <select id="student">
-                <option>Select Student</option>
-
-                <option>Juan Dela Cruz</option>
-                <option>Maria Santos</option>
-                <option>Pedro Garcia</option>
-                <option>Ana Reyes</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="plot"> Garden Plot </label>
-
-              <select id="plot">
-                <option>Select Available Plot</option>
-
-                <option>A-13</option>
-                <option>A-14</option>
-                <option>B-06</option>
-                <option>B-07</option>
-              </select>
-            </div>
-
-            <button class="btn btn-primary">Assign Plot</button>
-          </form>
-        </section>
-
-        <br />
-
-        <section class="card">
-          <h2>Garden Plot List</h2>
+          <h2>Student List</h2>
 
           <br />
 
@@ -113,11 +75,13 @@
             <table>
               <thead>
                 <tr>
-                  <th>Plot ID</th>
+                  <th>ID</th>
 
-                  <th>Location</th>
+                  <th>Name</th>
 
-                  <th>Assigned Student</th>
+                  <th>Grade & Section</th>
+
+                  <th>Garden Plot</th>
 
                   <th>Status</th>
 
@@ -127,14 +91,16 @@
 
               <tbody>
                 <tr>
+                  <td>STU-001</td>
+
+                  <td>Juan Dela Cruz</td>
+
+                  <td>Grade 11 - STEM A</td>
+
                   <td>A-12</td>
 
-                  <td>Section A</td>
-
-                  <td>Student User</td>
-
                   <td>
-                    <span class="badge badge-success"> Assigned </span>
+                    <span class="badge badge-success"> Active </span>
                   </td>
 
                   <td>
@@ -143,30 +109,16 @@
                 </tr>
 
                 <tr>
-                  <td>A-13</td>
-
-                  <td>Section A</td>
-
-                  <td>—</td>
-
-                  <td>
-                    <span class="badge badge-info"> Available </span>
-                  </td>
-
-                  <td>
-                    <button class="btn btn-primary">Assign</button>
-                  </td>
-                </tr>
-
-                <tr>
-                  <td>A-14</td>
-
-                  <td>Section A</td>
+                  <td>STU-002</td>
 
                   <td>Maria Santos</td>
 
+                  <td>Grade 11 - STEM A</td>
+
+                  <td>A-14</td>
+
                   <td>
-                    <span class="badge badge-success"> Assigned </span>
+                    <span class="badge badge-success"> Active </span>
                   </td>
 
                   <td>
@@ -175,18 +127,38 @@
                 </tr>
 
                 <tr>
-                  <td>B-06</td>
+                  <td>STU-003</td>
 
-                  <td>Section B</td>
+                  <td>Pedro Garcia</td>
+
+                  <td>Grade 11 - STEM B</td>
 
                   <td>—</td>
 
                   <td>
-                    <span class="badge badge-info"> Available </span>
+                    <span class="badge badge-warning"> Unassigned </span>
                   </td>
 
                   <td>
-                    <button class="btn btn-primary">Assign</button>
+                    <button class="btn btn-primary">Assign Plot</button>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>STU-004</td>
+
+                  <td>Ana Reyes</td>
+
+                  <td>Grade 12 - STEM A</td>
+
+                  <td>B-02</td>
+
+                  <td>
+                    <span class="badge badge-success"> Active </span>
+                  </td>
+
+                  <td>
+                    <button class="btn btn-secondary">View</button>
                   </td>
                 </tr>
               </tbody>

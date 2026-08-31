@@ -1,0 +1,183 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Admin Dashboard | Garden Plot</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/admin.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="dashboard.html" class="logo">
+          <span class="logo-icon">🌱</span>
+
+          Garden Plot Admin
+        </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="dashboard.html" class="active"> Dashboard </a>
+          </li>
+
+          <li>
+            <a href="manage_plots.html"> Manage Plots </a>
+          </li>
+
+          <li>
+            <a href="manage_students.html"> Students </a>
+          </li>
+
+          <li>
+            <a href="reports.html"> Reports </a>
+          </li>
+
+          <li>
+            <a href="student_observations.html"> Observations </a>
+          </li>
+
+          <li>
+            <a href="../index.html"> Logout </a>
+          </li>
+        </ul>
+
+        <div class="user-menu">
+          <div class="user-avatar">A</div>
+
+          <div class="user-info">
+            <strong>Administrator</strong>
+
+            <span>Admin</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="admin-header">
+          <h1>Administrator Dashboard</h1>
+
+          <p>
+            Manage students, garden plots, observations, and system reports.
+          </p>
+        </section>
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">👨‍🎓</div>
+
+            <h3>120</h3>
+
+            <p>Registered Students</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🌱</div>
+
+            <h3>100</h3>
+
+            <p>Assigned Plots</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+
+            <h3>356</h3>
+
+            <p>Observations</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">⚠️</div>
+
+            <h3>8</h3>
+
+            <p>Plots Needing Attention</p>
+          </div>
+        </section>
+
+        <section class="admin-grid">
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h2>Management</h2>
+            </div>
+
+            <div class="admin-actions">
+              <a href="manage_plots.html" class="admin-action">
+                <span>🌱</span>
+
+                Manage Plots
+              </a>
+
+              <a href="manage_students.html" class="admin-action">
+                <span>👨‍🎓</span>
+
+                Manage Students
+              </a>
+
+              <a href="student_observations.html" class="admin-action">
+                <span>📝</span>
+
+                Observations
+              </a>
+
+              <a href="reports.html" class="admin-action">
+                <span>📊</span>
+
+                Reports
+              </a>
+            </div>
+          </div>
+
+          <div class="admin-card">
+            <div class="admin-card-header">
+              <h2>Recent Activity</h2>
+            </div>
+
+            <div class="observation-item">
+              <div class="observation-meta">
+                <span>Today</span>
+
+                <span class="badge badge-info"> Observation </span>
+              </div>
+
+              <h3>Student A updated Plot A-12</h3>
+
+              <p>New garden observation submitted.</p>
+            </div>
+
+            <div class="observation-item">
+              <div class="observation-meta">
+                <span>Yesterday</span>
+
+                <span class="badge badge-success"> Assignment </span>
+              </div>
+
+              <h3>Plot B-05 assigned</h3>
+
+              <p>A garden plot was assigned to a student.</p>
+            </div>
+
+            <div class="observation-item">
+              <div class="observation-meta">
+                <span>August 28</span>
+
+                <span class="badge badge-info"> Student </span>
+              </div>
+
+              <h3>New student registered</h3>
+
+              <p>A new student account was created.</p>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

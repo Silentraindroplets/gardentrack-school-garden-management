@@ -1,75 +1,156 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Student Dashboard - GreenTrack</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../style.css">
-</head>
-<body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <div class="app-shell">
+    <title>Student Dashboard | Garden Plot</title>
 
-    <aside class="sidebar">
-      <div class="sidebar__logo">🌱 GardenTrack</div>
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/student.css" />
+  </head>
 
-      <div class="sidebar__section-label">Overview</div>
-      <a href="student_dashboard.html" class="sidebar__link is-active">Dashboard</a>
+  <body>
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="dashboard.html" class="logo">
+          <span class="logo-icon">🌱</span>
+          Garden Plot
+        </a>
 
-      <div class="sidebar__section-label">Management</div>
-      <a href="my_plot.html" class="sidebar__link">My Garden Plot</a>
-      <a href="observations.html" class="sidebar__link">Observations</a>
+        <ul class="nav-links">
+          <li>
+            <a href="dashboard.html" class="active"> Dashboard </a>
+          </li>
 
-      <a href="../home.html" class="sidebar__link sidebar__signout">Sign Out</a>
-    </aside>
+          <li>
+            <a href="my_plot.html"> My Plot </a>
+          </li>
 
-    <main class="main">
-      <div class="topbar">
-        <span class="topbar__title">Student Portal</span>
-        <span class="topbar__user">👤 Student</span>
-      </div>
+          <li>
+            <a href="observations.html"> Observations </a>
+          </li>
 
-      <section class="panel panel--welcome">
-        <div>
-          <p class="eyebrow">Sunday, December 15, 2024</p>
-          <h2>Welcome back, Student!</h2>
-          <p style="margin:0;">Your lettuces are doing great! Don't forget today's observation.</p>
-        </div>
-        <a href="observations.html" class="btn-primary">Daily Observation</a>
-      </section>
+          <li>
+            <a href="plot_journal.html"> Plot Journal </a>
+          </li>
 
-      <section class="stat-cards">
-        <div class="stat-card">
-          <div class="stat-card__label">Assigned Plot</div>
-          <div class="stat-card__value">A1</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__label">Plant</div>
-          <div class="stat-card__value">Lettuce</div>
-        </div>
-        <div class="stat-card">
-          <div class="stat-card__label">Last Observation</div>
-          <div class="stat-card__value">Yesterday</div>
-        </div>
-      </section>
-
-      <section class="panel">
-        <h3 class="panel__title">Height Progress</h3>
-        <div class="chart-placeholder">📈 Growth chart will render here once JS is wired up</div>
-      </section>
-
-      <section class="panel">
-        <h3 class="panel__title">Upcoming Assigned Schedules</h3>
-        <ul>
-          <li>December 28, 2024 — Photography Day</li>
-          <li>January 12, 2025 — Fertilize Plot</li>
+          <li>
+            <a href="../index.html"> Logout </a>
+          </li>
         </ul>
-      </section>
+
+        <div class="user-menu">
+          <div class="user-avatar">S</div>
+
+          <div class="user-info">
+            <strong>Student User</strong>
+            <span>Student</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <section class="student-welcome">
+          <h1>Welcome back, Student! 🌱</h1>
+
+          <p>
+            Keep track of your garden plot and record your observations
+            regularly.
+          </p>
+        </section>
+
+        <section class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-icon">🌿</div>
+            <h3>1</h3>
+            <p>Assigned Plot</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📝</div>
+            <h3>12</h3>
+            <p>Total Observations</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">📔</div>
+            <h3>8</h3>
+            <p>Journal Entries</p>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🌱</div>
+            <h3>Growing</h3>
+            <p>Plot Status</p>
+          </div>
+        </section>
+
+        <div class="card plot-card">
+          <div class="plot-info">
+            <span class="badge badge-success"> Active </span>
+
+            <h2>Garden Plot A-12</h2>
+
+            <p class="plot-location">Location: School Garden — Section A</p>
+
+            <br />
+
+            <a href="my_plot.html" class="btn btn-primary"> View My Plot </a>
+          </div>
+
+          <div class="plot-icon">🌻</div>
+        </div>
+
+        <br />
+
+        <section>
+          <div class="page-header">
+            <h2>Quick Actions</h2>
+
+            <p>Manage your garden activities.</p>
+          </div>
+
+          <div class="quick-actions">
+            <div class="action-card">
+              <div class="action-icon">📝</div>
+
+              <h3>Record Observation</h3>
+
+              <p>Record the current condition of your plants.</p>
+
+              <a href="observations.html" class="btn btn-primary">
+                Add Observation
+              </a>
+            </div>
+
+            <div class="action-card">
+              <div class="action-icon">📔</div>
+
+              <h3>Update Journal</h3>
+
+              <p>Write about your garden activities and progress.</p>
+
+              <a href="plot_journal.html" class="btn btn-primary">
+                Open Journal
+              </a>
+            </div>
+
+            <div class="action-card">
+              <div class="action-icon">🌱</div>
+
+              <h3>View Plot</h3>
+
+              <p>View your assigned plot information.</p>
+
+              <a href="my_plot.html" class="btn btn-primary"> View Plot </a>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
-
-  </div>
-
-</body>
+  </body>
 </html>

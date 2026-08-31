@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Observations | Garden Plot</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/student.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="dashboard.html" class="logo">
+          <span class="logo-icon">🌱</span>
+          Garden Plot
+        </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="dashboard.html">Dashboard</a>
+          </li>
+
+          <li>
+            <a href="my_plot.html">My Plot</a>
+          </li>
+
+          <li>
+            <a href="observations.html" class="active"> Observations </a>
+          </li>
+
+          <li>
+            <a href="plot_journal.html"> Plot Journal </a>
+          </li>
+
+          <li>
+            <a href="../index.html"> Logout </a>
+          </li>
+        </ul>
+
+        <div class="user-menu">
+          <div class="user-avatar">S</div>
+
+          <div class="user-info">
+            <strong>Student User</strong>
+            <span>Student</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Observation History</h1>
+
+          <p>Record and review observations from your garden plot.</p>
+        </div>
+
+        <section class="card">
+          <h2>Add New Observation</h2>
+
+          <br />
+
+          <form>
+            <div class="form-group">
+              <label for="observation-date"> Observation Date </label>
+
+              <input type="date" id="observation-date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="plant-condition"> Plant Condition </label>
+
+              <select id="plant-condition">
+                <option>Healthy</option>
+                <option>Growing</option>
+                <option>Needs Attention</option>
+                <option>Diseased</option>
+                <option>Damaged</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="observation"> Observation </label>
+
+              <textarea
+                id="observation"
+                placeholder="Describe what you observed..."
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary">Save Observation</button>
+          </form>
+        </section>
+
+        <br />
+
+        <section class="card">
+          <h2>Previous Observations</h2>
+
+          <br />
+
+          <div class="observation-item">
+            <div class="observation-meta">
+              <span>August 28, 2026</span>
+
+              <span class="badge badge-success"> Healthy </span>
+            </div>
+
+            <h3>Tomato plants are growing</h3>
+
+            <p>
+              The tomato plants have developed several new leaves. The soil
+              remains moist.
+            </p>
+          </div>
+
+          <div class="observation-item">
+            <div class="observation-meta">
+              <span>August 24, 2026</span>
+
+              <span class="badge badge-success"> Healthy </span>
+            </div>
+
+            <h3>Plants receiving enough sunlight</h3>
+
+            <p>
+              The plants appear healthy and are receiving adequate sunlight
+              throughout the day.
+            </p>
+          </div>
+
+          <div class="observation-item">
+            <div class="observation-meta">
+              <span>August 20, 2026</span>
+
+              <span class="badge badge-warning"> Needs Attention </span>
+            </div>
+
+            <h3>Some leaves were wilting</h3>
+
+            <p>
+              Several leaves appeared slightly wilted. The plants were watered
+              afterward.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

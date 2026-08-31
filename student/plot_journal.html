@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Plot Journal | Garden Plot</title>
+
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/nav.css" />
+    <link rel="stylesheet" href="../css/student.css" />
+  </head>
+
+  <body>
+    <header class="navbar">
+      <div class="navbar-inner">
+        <a href="dashboard.html" class="logo">
+          <span class="logo-icon">🌱</span>
+
+          Garden Plot
+        </a>
+
+        <ul class="nav-links">
+          <li>
+            <a href="dashboard.html"> Dashboard </a>
+          </li>
+
+          <li>
+            <a href="my_plot.html"> My Plot </a>
+          </li>
+
+          <li>
+            <a href="observations.html"> Observations </a>
+          </li>
+
+          <li>
+            <a href="plot_journal.html" class="active"> Plot Journal </a>
+          </li>
+
+          <li>
+            <a href="../index.html"> Logout </a>
+          </li>
+        </ul>
+
+        <div class="user-menu">
+          <div class="user-avatar">S</div>
+
+          <div class="user-info">
+            <strong>Student User</strong>
+
+            <span>Student</span>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main class="main-content">
+      <div class="container">
+        <div class="page-header">
+          <h1>Garden Plot Journal</h1>
+
+          <p>
+            Document your activities and experiences while maintaining your
+            garden plot.
+          </p>
+        </div>
+
+        <section class="card">
+          <h2>New Journal Entry</h2>
+
+          <br />
+
+          <form>
+            <div class="form-group">
+              <label for="journal-date"> Date </label>
+
+              <input type="date" id="journal-date" required />
+            </div>
+
+            <div class="form-group">
+              <label for="journal-title"> Title </label>
+
+              <input
+                type="text"
+                id="journal-title"
+                placeholder="Enter journal title"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="journal-content"> Journal Entry </label>
+
+              <textarea
+                id="journal-content"
+                placeholder="Write about your garden activities..."
+              ></textarea>
+            </div>
+
+            <button class="btn btn-primary">Save Journal Entry</button>
+          </form>
+        </section>
+
+        <br />
+
+        <section>
+          <h2>Previous Entries</h2>
+
+          <br />
+
+          <div class="journal-entry">
+            <div class="journal-date">August 27, 2026</div>
+
+            <h3>Watering the Plants</h3>
+
+            <p>
+              Today I watered the tomato and basil plants. The soil was slightly
+              dry, so I made sure that the plants received enough water.
+            </p>
+          </div>
+
+          <div class="journal-entry">
+            <div class="journal-date">August 23, 2026</div>
+
+            <h3>Checking Plant Growth</h3>
+
+            <p>
+              I noticed that the tomato plants have grown taller compared to
+              last week. New leaves are also beginning to appear.
+            </p>
+          </div>
+
+          <div class="journal-entry">
+            <div class="journal-date">August 18, 2026</div>
+
+            <h3>Cleaning the Plot</h3>
+
+            <p>
+              I removed weeds around the plants and cleaned the surrounding area
+              of the plot.
+            </p>
+          </div>
+        </section>
+      </div>
+    </main>
+  </body>
+</html>

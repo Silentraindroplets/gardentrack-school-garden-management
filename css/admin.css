@@ -1,0 +1,177 @@
+/* =========================================
+   ADMIN
+========================================= */
+
+.admin-header {
+  background: var(--secondary);
+  color: var(--white);
+
+  border-radius: 12px;
+
+  padding: 28px;
+
+  margin-bottom: 25px;
+}
+
+.admin-header h1 {
+  margin-bottom: 5px;
+}
+
+.admin-header p {
+  color: #f1e7e2;
+}
+
+/* =========================================
+   ADMIN GRID
+========================================= */
+
+.admin-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.admin-card {
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 22px;
+
+  box-shadow: var(--shadow);
+}
+
+.admin-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  margin-bottom: 18px;
+}
+
+.admin-card-header h2 {
+  font-size: 18px;
+}
+
+/* =========================================
+   ACTION PANEL
+========================================= */
+
+.admin-actions {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.admin-action {
+  padding: 18px;
+
+  border-radius: 8px;
+
+  background: #f2f6ef;
+
+  color: var(--text);
+
+  text-align: center;
+
+  font-weight: 600;
+}
+
+.admin-action:hover {
+  background: var(--primary-light);
+
+  color: var(--primary);
+
+  text-decoration: none;
+}
+
+.admin-action span {
+  display: block;
+
+  font-size: 28px;
+
+  margin-bottom: 5px;
+}
+
+/* =========================================
+   FILTERS
+========================================= */
+
+.filter-bar {
+  display: flex;
+  gap: 10px;
+  align-items: end;
+
+  background: white;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+
+  padding: 18px;
+
+  margin-bottom: 20px;
+}
+
+.filter-bar .form-group {
+  flex: 1;
+  margin: 0;
+}
+
+/* =========================================
+   REPORT CARDS
+========================================= */
+
+.report-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+}
+
+.report-card {
+  background: white;
+
+  padding: 22px;
+
+  border: 1px solid var(--border);
+
+  border-radius: var(--radius);
+}
+
+.report-card h3 {
+  margin-bottom: 5px;
+}
+
+.report-card p {
+  color: var(--text-light);
+  font-size: 14px;
+
+  margin-bottom: 15px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media (max-width: 800px) {
+  .admin-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .admin-actions {
+    grid-template-columns: 1fr;
+  }
+}

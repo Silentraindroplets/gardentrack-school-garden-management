@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Garden Plot Management System | Login</title>
+
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/login.css" />
+  </head>
+
+  <body class="login-page">
+    <main class="login-container">
+      <section class="login-brand">
+        <div class="brand-icon">🌱</div>
+
+        <h1>Garden Plot</h1>
+        <h2>Management System</h2>
+
+        <p>
+          A simple platform for managing student garden plots, recording
+          observations, and maintaining garden journals.
+        </p>
+      </section>
+
+      <section class="login-card">
+        <h2>Welcome Back</h2>
+        <p class="login-subtitle">Sign in to access your account.</p>
+
+        <form action="student/dashboard.html">
+          <div class="form-group">
+            <label for="username">Username</label>
+            <input
+              type="text"
+              id="username"
+              name="username"
+              placeholder="Enter your username"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Password</label>
+            <input
+              type="password"
+              id="password"
+              name="password"
+              placeholder="Enter your password"
+              required
+            />
+          </div>
+
+          <div class="form-options">
+            <label class="remember-me">
+              <input type="checkbox" />
+              Remember me
+            </label>
+
+            <a href="#">Forgot Password?</a>
+          </div>
+
+          <button type="submit" class="btn btn-primary login-btn">
+            Sign In
+          </button>
+        </form>
+
+        <div class="login-demo">
+          <p><strong>Demo:</strong></p>
+          <p>Student → student/dashboard.html</p>
+          <p>Admin → admin/dashboard.html</p>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
