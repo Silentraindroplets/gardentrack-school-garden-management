@@ -70,16 +70,20 @@ GreenTrack solves this by giving teachers a single place to manage and assign ga
 ```
 greentrack/
 ├── index.html                  # Login page (entry point)
+├── signup.html                  # Signup page (entry point)
 │
 ├── student/
 │   ├── dashboard.html          # Student Dashboard
 │   ├── my-plot.html            # My Garden Plot page
 │   └── observations.html       # Observation History page
+│   └── plot_journal.html       # A diary log of assigned plot (not sure if this is necessary)
 │
 ├── admin/
 │   ├── dashboard.html          # Admin Dashboard
-│   └── manage-plots.html       # Assign Garden Plot (admin-side)
-│
+│   └── manage_plots.html       # Assign Garden Plot (admin-side)
+│   └── reports.html       # Generate reports (admin-side)
+│   └── student_observations.html # Monitor observations submitted by students    (admin-side)
+│   └── manage_students.html       # Manage students (admin-side)
 ├── css/
 │   ├── style.css               # Global styles, resets, variables
 │   ├── nav.css                 # Responsive navigation
