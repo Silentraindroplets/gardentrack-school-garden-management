@@ -6,7 +6,7 @@
 
     <title>Sign Up | Garden Tracker</title>
 
-    <link rel="icon" type="image/png" href="images/logowebsite.png" />
+    <link rel="icon" type="image/svg+xml" href="images/logo.svg" />
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/auth.css">
 </head>
@@ -20,7 +20,7 @@
             <!-- Logo / Brand -->
             <div class="auth-brand">
                 <div class="brand-icon">
-                    <img src="images/logowebsite.png" alt="Garden Plot Logo" />
+                    <img src="images/logo.svg" alt="Garden Plot Logo" />
                 </div>
 
                 <div>
@@ -36,7 +36,7 @@
             </div>
 
             <!-- Signup Form -->
-            <form class="auth-form">
+            <form id="signupForm" class="auth-form" novalidate>
 
                 <!-- Full Name -->
                 <div class="form-group">
@@ -157,6 +157,8 @@
                     Create Account
                 </button>
 
+                <p id="signupMessage" class="form-message" aria-live="polite"></p>
+
             </form>
 
             <!-- Login Link -->
@@ -170,6 +172,8 @@
         </section>
 
     </main>
+
+    <script src="js/auth.js"></script>
 
 </body>
 </html>
