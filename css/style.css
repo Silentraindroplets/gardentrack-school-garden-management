@@ -1,16 +1,12 @@
-/* =========================================
-   GLOBAL STYLES
-========================================= */
+/* Global styles */
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
 }
-/* =========================================
-   POPPINS FONT
-========================================= */
+
+/* Typography */
 
 @font-face {
   font-family: "Poppins";
@@ -115,18 +111,14 @@ button {
   cursor: pointer;
 }
 
-/* =========================================
-   CONTAINER
-========================================= */
+/* Layout */
 
 .container {
   width: min(1200px, 92%);
   margin: auto;
 }
 
-/* =========================================
-   BUTTONS
-========================================= */
+/* Buttons */
 
 .btn {
   display: inline-block;
@@ -177,9 +169,7 @@ button {
   color: white;
 }
 
-/* =========================================
-   CARDS
-========================================= */
+/* Cards */
 
 .card {
   background: var(--white);
@@ -189,9 +179,7 @@ button {
   padding: 22px;
 }
 
-/* =========================================
-   FORMS
-========================================= */
+/* Forms */
 
 .form-group {
   margin-bottom: 18px;
@@ -226,9 +214,7 @@ button {
   resize: vertical;
 }
 
-/* =========================================
-   TABLE
-========================================= */
+/* Tables */
 
 .table-container {
   overflow-x: auto;
@@ -255,9 +241,7 @@ tr:hover td {
   background: #fafcf9;
 }
 
-/* =========================================
-   BADGES
-========================================= */
+/* Badges */
 
 .badge {
   display: inline-block;
@@ -287,9 +271,7 @@ tr:hover td {
   color: #32678f;
 }
 
-/* =========================================
-   PAGE HEADER
-========================================= */
+/* Page header */
 
 .page-header {
   margin-bottom: 25px;
@@ -304,9 +286,7 @@ tr:hover td {
   color: var(--text-light);
 }
 
-/* =========================================
-   STAT CARDS
-========================================= */
+/* Stats */
 
 .stats-grid {
   display: grid;
@@ -337,9 +317,7 @@ tr:hover td {
   font-size: 14px;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* Responsive */
 
 @media (max-width: 900px) {
   .stats-grid {
