@@ -6,6 +6,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  
 }
 /* =========================================
    POPPINS FONT
@@ -51,7 +52,7 @@
        COLOR THEME
     ================================ */
 
-  -text: #000000;
+  --text: #000000;
   --background: #f9f6f0;
   --primary: #1c5e22;
   --secondary: #6c4b41;
