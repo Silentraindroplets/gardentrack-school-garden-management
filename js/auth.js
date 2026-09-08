@@ -13,8 +13,10 @@ const demoUsers = {
 
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
+const adminSignupForm = document.getElementById('adminSignupForm');
 const loginMessage = document.getElementById('loginMessage');
 const signupMessage = document.getElementById('signupMessage');
+const adminSignupMessage = document.getElementById('adminSignupMessage');
 
 function setMessage(element, message, isSuccess = false) {
   if (!element) return;
@@ -67,12 +69,12 @@ if (signupForm) {
     event.preventDefault();
 
     const fullName = document.getElementById('fullname')?.value?.trim() ?? '';
-    const email = document.getElementById('email')?.value?.trim() ?? '';
+    const studentId = document.getElementById('student-id')?.value?.trim() ?? '';
     const password = document.getElementById('password')?.value?.trim() ?? '';
     const confirmPassword = document.getElementById('confirm-password')?.value?.trim() ?? '';
 
-    if (!fullName || !email || !password || !confirmPassword) {
-      setMessage(signupMessage, 'Please complete all sign-up fields.', false);
+    if (!fullName || !studentId || !password || !confirmPassword) {
+      setMessage(signupMessage, 'Please complete all student registration fields.', false);
       return;
     }
 
@@ -86,9 +88,33 @@ if (signupForm) {
       return;
     }
 
-    setMessage(signupMessage, 'Account created successfully. Redirecting to login...', true);
+    setMessage(signupMessage, 'Student account created successfully. Redirecting to login...', true);
     setTimeout(() => {
       window.location.href = 'index.html';
     }, 600);
+  });
+}
+
+if (adminSignupForm) {
+  adminSignupForm.addEventListener('submit', function (event) {
+    event.preventDefault();
+    const adminId = document.getElementById('admin-id')?.value?.trim() ?? '';
+    const adminName = document.getElementById('admin-name')?.value?.trim() ?? '';
+    const password = document.getElementById('admin-password')?.value?.trim() ?? '';
+    const confirmPassword = document.getElementById('admin-confirm-password')?.value?.trim() ?? '';
+    if (!adminId || !adminName || !password || !confirmPassword) {
+      setMessage(adminSignupMessage, 'Please complete all admin registration fields.', false);
+      return;
+    }
+    if (password.length < 6) {
+      setMessage(adminSignupMessage, 'Password must be at least 6 characters long.', false);
+      return;
+    }
+    if (password !== confirmPassword) {
+      setMessage(adminSignupMessage, 'Passwords do not match. Please try again.', false);
+      return;
+    }
+    setMessage(adminSignupMessage, 'Admin account created successfully. Redirecting to login...', true);
+    setTimeout(() => { window.location.href = 'index.html'; }, 600);
   });
 }
