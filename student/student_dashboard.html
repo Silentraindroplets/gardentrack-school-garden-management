@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/student.css" />
+    <script src="../js/dashboard.js" defer></script>
   </head>
 
   <body>
@@ -34,7 +35,7 @@
           </li>
 
           <li>
-            <a href="plot_journal.html"> Plot Journal </a>
+            <a href="plot_journal.html"> Logs </a>
           </li>
 
           <li>
@@ -43,7 +44,7 @@
 
         <div class="user-menu">
           <details>
-            <summary class="user-avatar" aria-label="Open user menu">S</summary>
+            <summary class="user-avatar" aria-label="Open user menu" data-username-initial>S</summary>
             <nav class="user-dropdown" aria-label="User menu">
               <a href="#profile">Profile</a>
               <a href="#account-settings">Account Settings</a>
@@ -52,7 +53,7 @@
           </details>
 
           <div class="user-info">
-            <strong>Student User</strong>
+            <strong data-username>Student</strong>
             <span>Student</span>
           </div>
         </div>
@@ -62,7 +63,7 @@
     <main class="main-content">
       <div class="container">
         <section class="student-welcome">
-          <h1>Welcome back, Student! 🌱</h1>
+          <h1>Welcome back, <span data-username>Student</span>! 🌱</h1>
 
           <p>
             Keep track of your garden plot and record your observations
@@ -86,7 +87,7 @@
           <div class="stat-card">
             <div class="stat-icon">📔</div>
             <h3>8</h3>
-            <p>Journal Entries</p>
+            <p>Observation Logs</p>
           </div>
 
           <div class="stat-card">
@@ -137,12 +138,12 @@
             <div class="action-card">
               <div class="action-icon">📔</div>
 
-              <h3>Update Journal</h3>
+              <h3>View Logs</h3>
 
-              <p>Write about your garden activities and progress.</p>
+              <p>Preview your previous observation logs.</p>
 
               <a href="plot_journal.html" class="btn btn-primary">
-                Open Journal
+                Open Logs
               </a>
             </div>
 

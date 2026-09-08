@@ -1,4 +1,5 @@
 const accountsStorageKey = 'gardenTrackerAccounts';
+const currentUserStorageKey = 'gardenTrackerCurrentUser';
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 const adminSignupForm = document.getElementById('adminSignupForm');
@@ -52,7 +53,7 @@ function validateCredentials(username, password) {
     return { valid: false, message: 'Invalid username or password.' };
   }
 
-  return { valid: true, redirect: selectedAccount.redirect };
+  return { valid: true, redirect: selectedAccount.redirect, username: selectedAccount.username };
 }
 
 function registerAccount({ username, fullName, password, confirmPassword, role, redirect, messageElement }) {
@@ -97,6 +98,7 @@ if (loginForm) {
     }
 
     setMessage(loginMessage, 'Login successful. Redirecting...', true);
+    localStorage.setItem(currentUserStorageKey, result.username);
     window.location.href = result.redirect;
   });
 }
@@ -106,7 +108,7 @@ if (signupForm) {
     event.preventDefault();
 
     registerAccount({
-      username: document.getElementById('student-id')?.value?.trim() ?? '',
+      username: document.getElementById('username')?.value?.trim() ?? '',
       fullName: document.getElementById('fullname')?.value?.trim() ?? '',
       password: document.getElementById('password')?.value?.trim() ?? '',
       confirmPassword: document.getElementById('confirm-password')?.value?.trim() ?? '',
@@ -122,7 +124,7 @@ if (adminSignupForm) {
     event.preventDefault();
 
     registerAccount({
-      username: document.getElementById('admin-id')?.value?.trim() ?? '',
+      username: document.getElementById('username')?.value?.trim() ?? '',
       fullName: document.getElementById('admin-name')?.value?.trim() ?? '',
       password: document.getElementById('admin-password')?.value?.trim() ?? '',
       confirmPassword: document.getElementById('admin-confirm-password')?.value?.trim() ?? '',

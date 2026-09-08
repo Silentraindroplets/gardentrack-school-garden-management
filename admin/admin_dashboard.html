@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/dashboard.js" defer></script>
   </head>
 
   <body>
@@ -45,7 +46,7 @@
 
         <div class="user-menu">
           <details>
-            <summary class="user-avatar" aria-label="Open user menu">A</summary>
+            <summary class="user-avatar" aria-label="Open user menu" data-username-initial>A</summary>
             <nav class="user-dropdown" aria-label="User menu">
               <a href="#profile">Profile</a>
               <a href="#account-settings">Account Settings</a>
@@ -54,7 +55,7 @@
           </details>
 
           <div class="user-info">
-            <strong>Administrator</strong>
+            <strong data-username>Administrator</strong>
 
             <span>Admin</span>
           </div>
@@ -65,7 +66,7 @@
     <main class="main-content">
       <div class="container">
         <section class="admin-header">
-          <h1>Administrator Dashboard</h1>
+          <h1><span data-username>Administrator</span> Dashboard</h1>
 
           <p>
             Manage students, garden plots, observations, and system reports.

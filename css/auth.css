@@ -142,41 +142,16 @@
 }
 
 .login-brand {
-  position: relative;
   min-height: 620px;
   padding: 56px 48px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background: linear-gradient(180deg, var(--primary), var(--primary-dark));
+  background: var(--primary);
   color: #fff;
 }
 
-.login-brand::before,
-.login-brand::after {
-  content: "";
-  position: absolute;
-  border-radius: 50%;
-  background: rgba(255, 255, 255, 0.05);
-}
-
-.login-brand::before {
-  width: 280px;
-  height: 280px;
-  right: -90px;
-  top: -110px;
-}
-
-.login-brand::after {
-  width: 220px;
-  height: 220px;
-  left: -70px;
-  bottom: -90px;
-}
-
 .brand-icon {
-  position: relative;
-  z-index: 1;
   width: 92px;
   height: 92px;
   display: flex;
@@ -193,13 +168,6 @@
   height: 100%;
   object-fit: contain;
   display: block;
-}
-
-.login-brand h1,
-.login-brand h2,
-.login-brand p {
-  position: relative;
-  z-index: 1;
 }
 
 .login-brand h1 {

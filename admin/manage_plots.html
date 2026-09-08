@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/admin.css" />
+    <script src="../js/manage_plots.js" defer></script>
   </head>
 
   <body>
@@ -71,47 +72,13 @@
         </div>
 
         <section class="card">
-          <h2>Assign Garden Plot</h2>
+          <div class="admin-card-header">
+            <h2>Garden Plot List</h2>
 
-          <br />
-
-          <form>
-            <div class="form-group">
-              <label for="student"> Student </label>
-
-              <select id="student">
-                <option>Select Student</option>
-
-                <option>Juan Dela Cruz</option>
-                <option>Maria Santos</option>
-                <option>Pedro Garcia</option>
-                <option>Ana Reyes</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="plot"> Garden Plot </label>
-
-              <select id="plot">
-                <option>Select Available Plot</option>
-
-                <option>A-13</option>
-                <option>A-14</option>
-                <option>B-06</option>
-                <option>B-07</option>
-              </select>
-            </div>
-
-            <button class="btn btn-primary">Assign Plot</button>
-          </form>
-        </section>
-
-        <br />
-
-        <section class="card">
-          <h2>Garden Plot List</h2>
-
-          <br />
+            <button class="btn btn-primary" type="button" data-open-assign-plot>
+              Assign Garden Plot
+            </button>
+          </div>
 
           <div class="table-container">
             <table>
@@ -199,5 +166,52 @@
         </section>
       </div>
     </main>
+
+    <div class="modal-overlay" data-assign-plot-modal hidden>
+      <section
+        class="modal-card"
+        role="dialog"
+        aria-modal="true"
+        aria-labelledby="assign-plot-title"
+      >
+        <div class="modal-header">
+          <h2 id="assign-plot-title">Assign Garden Plot</h2>
+
+          <button class="modal-close" type="button" aria-label="Close dialog" data-close-assign-plot>
+            &times;
+          </button>
+        </div>
+
+        <form data-assign-plot-form>
+          <div class="form-group">
+            <label for="student">Student</label>
+
+            <select id="student">
+              <option>Select Student</option>
+
+              <option>Juan Dela Cruz</option>
+              <option>Maria Santos</option>
+              <option>Pedro Garcia</option>
+              <option>Ana Reyes</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="plot">Garden Plot</label>
+
+            <select id="plot">
+              <option>Select Available Plot</option>
+
+              <option>A-13</option>
+              <option>A-14</option>
+              <option>B-06</option>
+              <option>B-07</option>
+            </select>
+          </div>
+
+          <button class="btn btn-primary" type="submit">Assign Plot</button>
+        </form>
+      </section>
+    </div>
   </body>
 </html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Plot Journal | GardenTrack</title>
+    <title>Observation Logs | GardenTrack</title>
 
     <link rel="icon" type="image/svg+xml" href="../images/logo.svg" />
     <link rel="stylesheet" href="../css/style.css" />
@@ -34,7 +34,7 @@
           </li>
 
           <li>
-            <a href="plot_journal.html" class="active"> Plot Journal </a>
+            <a href="plot_journal.html" class="active"> Logs </a>
           </li>
 
           <li>
@@ -63,87 +63,53 @@
     <main class="main-content">
       <div class="container">
         <div class="page-header">
-          <h1>Garden Plot Journal</h1>
+          <h1>Observation Logs</h1>
 
-          <p>
-            Document your activities and experiences while maintaining your
-            garden plot.
-          </p>
+          <p>Preview your previous observation logs from your garden plot.</p>
         </div>
 
-        <section class="card">
-          <h2>New Journal Entry</h2>
-
-          <br />
-
-          <form>
-            <div class="form-group">
-              <label for="journal-date"> Date </label>
-
-              <input type="date" id="journal-date" required />
-            </div>
-
-            <div class="form-group">
-              <label for="journal-title"> Title </label>
-
-              <input
-                type="text"
-                id="journal-title"
-                placeholder="Enter journal title"
-              />
-            </div>
-
-            <div class="form-group">
-              <label for="journal-content"> Journal Entry </label>
-
-              <textarea
-                id="journal-content"
-                placeholder="Write about your garden activities..."
-              ></textarea>
-            </div>
-
-            <button class="btn btn-primary">Save Journal Entry</button>
-          </form>
-        </section>
-
-        <br />
-
         <section>
-          <h2>Previous Entries</h2>
+          <h2>Previous Logs</h2>
 
           <br />
 
-          <div class="journal-entry">
-            <div class="journal-date">August 27, 2026</div>
+          <div class="log-entry">
+            <div class="log-date">August 28, 2026</div>
 
-            <h3>Watering the Plants</h3>
+            <h3>Healthy lettuce growth</h3>
 
             <p>
-              Today I watered the tomato and basil plants. The soil was slightly
-              dry, so I made sure that the plants received enough water.
+              Plant height: 39 cm · Weather: Sunny · Soil: Moist · Condition:
+              Healthy
             </p>
+
+            <p>The lettuce has developed several new leaves and looks healthy.</p>
           </div>
 
-          <div class="journal-entry">
-            <div class="journal-date">August 23, 2026</div>
+          <div class="log-entry">
+            <div class="log-date">August 24, 2026</div>
 
-            <h3>Checking Plant Growth</h3>
+            <h3>Strong sunlight throughout the day</h3>
 
             <p>
-              I noticed that the tomato plants have grown taller compared to
-              last week. New leaves are also beginning to appear.
+              Plant height: 36 cm · Weather: Partly cloudy · Soil: Moist ·
+              Condition: Healthy
             </p>
+
+            <p>The plant received adequate sunlight and continues to grow well.</p>
           </div>
 
-          <div class="journal-entry">
-            <div class="journal-date">August 18, 2026</div>
+          <div class="log-entry">
+            <div class="log-date">August 20, 2026</div>
 
-            <h3>Cleaning the Plot</h3>
+            <h3>Leaves needed attention</h3>
 
             <p>
-              I removed weeds around the plants and cleaned the surrounding area
-              of the plot.
+              Plant height: 32 cm · Weather: Sunny · Soil: Dry · Condition:
+              Needs Attention
             </p>
+
+            <p>Several leaves appeared wilted, so the plant was watered afterward.</p>
           </div>
         </section>
       </div>

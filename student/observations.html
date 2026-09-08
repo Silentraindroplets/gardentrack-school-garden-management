@@ -34,7 +34,7 @@
           </li>
 
           <li>
-            <a href="plot_journal.html"> Plot Journal </a>
+            <a href="plot_journal.html"> Logs </a>
           </li>
 
           <li>
@@ -62,100 +62,105 @@
     <main class="main-content">
       <div class="container">
         <div class="page-header">
-          <h1>Observation History</h1>
+          <h1>Daily Observation</h1>
 
-          <p>Record and review observations from your garden plot.</p>
+          <p>Record today's data from your garden plot.</p>
         </div>
 
-        <section class="card">
-          <h2>Add New Observation</h2>
+        <section class="card observation-form-card">
+          <h2>Daily Observation</h2>
 
-          <br />
+          <p class="observation-form-subtitle">
+            Record today's data for Plot - A1 * Lettuce
+          </p>
 
-          <form>
-            <div class="form-group">
-              <label for="observation-date"> Observation Date </label>
+          <form class="observation-form">
+            <div class="observation-form-grid">
+              <div class="form-group">
+                <label for="observation-date">Date</label>
 
-              <input type="date" id="observation-date" required />
+                <input type="date" id="observation-date" required />
+              </div>
+
+              <div class="form-group">
+                <label for="plant-height">Plant Height (cm)</label>
+
+                <input
+                  type="number"
+                  id="plant-height"
+                  min="0"
+                  step="0.1"
+                  placeholder="ex. 39"
+                />
+              </div>
             </div>
 
             <div class="form-group">
-              <label for="plant-condition"> Plant Condition </label>
+              <label for="weather-condition">Weather Condition</label>
 
-              <select id="plant-condition">
-                <option>Healthy</option>
-                <option>Growing</option>
-                <option>Needs Attention</option>
-                <option>Diseased</option>
-                <option>Damaged</option>
+              <select id="weather-condition">
+                <option>Sunny</option>
+                <option>Partly cloudy</option>
+                <option>Cloudy</option>
+                <option>Rainy</option>
+                <option>Windy</option>
               </select>
             </div>
 
+            <div class="observation-form-grid">
+              <div class="form-group">
+                <label for="soil-condition">Soil Condition</label>
+
+                <select id="soil-condition">
+                  <option>Moist</option>
+                  <option>Dry</option>
+                  <option>Wet</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="plant-condition">Plant Condition</label>
+
+                <select id="plant-condition">
+                  <option>Healthy</option>
+                  <option>Growing</option>
+                  <option>Needs Attention</option>
+                  <option>Diseased</option>
+                  <option>Damaged</option>
+                </select>
+              </div>
+            </div>
+
             <div class="form-group">
-              <label for="observation"> Observation </label>
+              <label for="observation">Observation Notes</label>
 
               <textarea
                 id="observation"
-                placeholder="Describe what you observed..."
+                placeholder="Describe what you observed today..."
               ></textarea>
             </div>
 
-            <button class="btn btn-primary">Save Observation</button>
+            <div class="form-group">
+              <label for="observation-photo">Photo Upload</label>
+
+              <label class="photo-upload" for="observation-photo">
+                <span class="photo-upload-icon" aria-hidden="true">+</span>
+                <span>Click to upload a photo of your plant</span>
+              </label>
+              <input
+                type="file"
+                id="observation-photo"
+                accept="image/*"
+                class="photo-upload-input"
+              />
+            </div>
+
+            <button class="btn btn-primary observation-submit" type="submit">
+              Submit Observation
+            </button>
           </form>
         </section>
 
-        <br />
-
-        <section class="card">
-          <h2>Previous Observations</h2>
-
-          <br />
-
-          <div class="observation-item">
-            <div class="observation-meta">
-              <span>August 28, 2026</span>
-
-              <span class="badge badge-success"> Healthy </span>
-            </div>
-
-            <h3>Tomato plants are growing</h3>
-
-            <p>
-              The tomato plants have developed several new leaves. The soil
-              remains moist.
-            </p>
-          </div>
-
-          <div class="observation-item">
-            <div class="observation-meta">
-              <span>August 24, 2026</span>
-
-              <span class="badge badge-success"> Healthy </span>
-            </div>
-
-            <h3>Plants receiving enough sunlight</h3>
-
-            <p>
-              The plants appear healthy and are receiving adequate sunlight
-              throughout the day.
-            </p>
-          </div>
-
-          <div class="observation-item">
-            <div class="observation-meta">
-              <span>August 20, 2026</span>
-
-              <span class="badge badge-warning"> Needs Attention </span>
-            </div>
-
-            <h3>Some leaves were wilting</h3>
-
-            <p>
-              Several leaves appeared slightly wilted. The plants were watered
-              afterward.
-            </p>
-          </div>
-        </section>
       </div>
     </main>
   </body>
