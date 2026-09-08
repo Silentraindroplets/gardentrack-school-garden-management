@@ -1,6 +1,6 @@
 School Garden Management Website
 
-A website designed to help schools manage their gardening programs digitally. GreenTrack allows teachers to assign garden plots to students, while enabling students to record plant observations and monitor growth over time.
+A website designed to help schools manage their gardening programs digitally. SGMW allows teachers to assign garden plots to students, while enabling students to record plant observations and monitor growth over time.
 
 **NOTE: Everything in this document is provisional!**
 
