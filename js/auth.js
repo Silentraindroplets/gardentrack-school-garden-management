@@ -15,7 +15,8 @@ function setMessage(element, message, isSuccess = false) {
 
 function getAccounts() {
   try {
-    return JSON.parse(localStorage.getItem(accountsStorageKey)) ?? [];
+    const storedAccounts = JSON.parse(localStorage.getItem(accountsStorageKey));
+    return Array.isArray(storedAccounts) ? storedAccounts : [];
   } catch (error) {
     return [];
   }
