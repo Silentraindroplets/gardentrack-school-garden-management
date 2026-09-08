@@ -1,4 +1,4 @@
-/* Student dashboard */
+/* Dashboard */
 
 .student-welcome {
   background: var(--primary);
@@ -20,7 +20,7 @@
   color: #e8f1e8;
 }
 
-/* Plot card */
+/* Plot */
 
 .plot-card {
   display: flex;
@@ -43,7 +43,7 @@
   font-size: 45px;
 }
 
-/* Quick actions */
+/* Actions */
 
 .quick-actions {
   display: grid;
@@ -52,7 +52,7 @@
 }
 
 .action-card {
-  background: white;
+  background: var(--white);
 
   border: 1px solid var(--border);
   border-radius: var(--radius);
@@ -117,7 +117,7 @@
 /* Journal */
 
 .journal-entry {
-  background: white;
+  background: var(--white);
 
   border: 1px solid var(--border);
 

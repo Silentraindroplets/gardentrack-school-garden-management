@@ -103,7 +103,7 @@
   place-items: center;
 
   background: var(--primary);
-  color: white;
+  color: var(--white);
 
   font-weight: bold;
   border: 0;
@@ -169,13 +169,13 @@
   color: var(--text-light);
 }
 
-/* Page content */
+/* Content */
 
 .main-content {
   padding: 35px 0 50px;
 }
 
-/* Mobile */
+/* Responsive */
 
 @media (max-width: 900px) {
   .navbar-inner {

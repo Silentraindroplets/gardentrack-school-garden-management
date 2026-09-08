@@ -1,4 +1,3 @@
-
 const accountsStorageKey = 'gardenTrackerAccounts';
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');

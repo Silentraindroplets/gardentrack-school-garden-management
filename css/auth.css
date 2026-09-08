@@ -1,4 +1,4 @@
-/* Authentication pages */
+/* Auth layout */
 
 .auth-page {
   min-height: 100vh;
@@ -134,7 +134,7 @@
   width: min(1050px, 100%);
   display: grid;
   grid-template-columns: 1fr 1fr;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid var(--border);
   border-radius: 22px;
   overflow: hidden;
@@ -296,17 +296,7 @@
   color: #aaa39a;
 }
 
-.form-group input:focus,
-.form-group select:focus {
-  border-color: var(--primary);
-
-  box-shadow: 0 0 0 3px rgba(28, 94, 34, 0.08);
-}
-
-
-/* =========================================
-   FORM OPTIONS
-   ========================================= */
+/* Form options */
 
 .form-options {
   display: flex;
@@ -328,9 +318,7 @@
 }
 
 
-/* =========================================
-   REMEMBER ME
-   ========================================= */
+/* Checkbox */
 
 .remember-me {
   display: flex;
@@ -352,9 +340,7 @@
 }
 
 
-/* =========================================
-   CHECKBOX - SIGNUP
-   ========================================= */
+/* Signup checkbox */
 
 .form-check {
   display: flex;
@@ -389,9 +375,7 @@
 }
 
 
-/* =========================================
-   SIGNUP TWO-COLUMN ROW
-   ========================================= */
+/* Signup rows */
 
 .form-row {
   display: grid;
@@ -402,9 +386,7 @@
 }
 
 
-/* =========================================
-   BUTTON
-   ========================================= */
+/* Auth buttons */
 
 .btn,
 .auth-button {
@@ -419,7 +401,7 @@
 .auth-button {
   background: var(--primary);
 
-  color: #ffffff;
+  color: var(--white);
 }
 
 .login-btn,
@@ -447,9 +429,7 @@
 }
 
 
-/* =========================================
-   DEMO BOX
-   ========================================= */
+/* Demo box */
 
 .login-demo {
   margin-top: 25px;
@@ -478,9 +458,7 @@
 }
 
 
-/* =========================================
-   SIGNUP FOOTER
-   ========================================= */
+/* Auth footer */
 
 .auth-footer {
   margin-top: 22px;
@@ -507,9 +485,7 @@
 }
 
 
-/* =========================================
-   RESPONSIVE
-   ========================================= */
+/* Responsive */
 
 @media (max-width: 800px) {
 

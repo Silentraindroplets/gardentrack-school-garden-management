@@ -1,4 +1,4 @@
-/* Admin */
+/* Dashboard */
 
 .admin-header {
   background: var(--secondary);
@@ -19,7 +19,7 @@
   color: #f1e7e2;
 }
 
-/* Admin grid */
+/* Cards */
 
 .admin-grid {
   display: grid;
@@ -28,7 +28,7 @@
 }
 
 .admin-card {
-  background: white;
+  background: var(--white);
 
   border: 1px solid var(--border);
 
@@ -51,7 +51,7 @@
   font-size: 18px;
 }
 
-/* Action panel */
+/* Actions */
 
 .admin-actions {
   display: grid;
@@ -96,7 +96,7 @@
   gap: 10px;
   align-items: end;
 
-  background: white;
+  background: var(--white);
 
   border: 1px solid var(--border);
 
@@ -112,7 +112,7 @@
   margin: 0;
 }
 
-/* Report cards */
+/* Reports */
 
 .report-grid {
   display: grid;
@@ -121,7 +121,7 @@
 }
 
 .report-card {
-  background: white;
+  background: var(--white);
 
   padding: 22px;
 
