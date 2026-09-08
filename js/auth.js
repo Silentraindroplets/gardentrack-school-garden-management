@@ -1,16 +1,5 @@
-const demoUsers = {
-  student: {
-    username: 'student',
-    password: 'student123',
-    redirect: 'student/student_dashboard.html',
-  },
-  admin: {
-    username: 'admin',
-    password: 'admin123',
-    redirect: 'admin/admin_dashboard.html',
-  },
-};
 
+const accountsStorageKey = 'gardenTrackerAccounts';
 const loginForm = document.getElementById('loginForm');
 const signupForm = document.getElementById('signupForm');
 const adminSignupForm = document.getElementById('adminSignupForm');
@@ -24,6 +13,27 @@ function setMessage(element, message, isSuccess = false) {
   element.classList.toggle('success', isSuccess);
 }
 
+function getAccounts() {
+  try {
+    return JSON.parse(localStorage.getItem(accountsStorageKey)) ?? [];
+  } catch (error) {
+    return [];
+  }
+}
+
+function saveAccount(account) {
+  const accounts = getAccounts();
+  const usernameExists = accounts.some(
+    (existingAccount) => existingAccount.username.toLowerCase() === account.username.toLowerCase()
+  );
+
+  if (usernameExists) return false;
+
+  accounts.push(account);
+  localStorage.setItem(accountsStorageKey, JSON.stringify(accounts));
+  return true;
+}
+
 function validateCredentials(username, password) {
   const normalizedUser = username.trim();
   const normalizedPass = password.trim();
@@ -32,18 +42,45 @@ function validateCredentials(username, password) {
     return { valid: false, message: 'Please enter both username and password.' };
   }
 
-  const selectedUser = Object.values(demoUsers).find(
-    (user) => user.username === normalizedUser && user.password === normalizedPass
+  const selectedAccount = getAccounts().find(
+    (account) =>
+      account.username.toLowerCase() === normalizedUser.toLowerCase() &&
+      account.password === normalizedPass
   );
 
-  if (!selectedUser) {
-    return {
-      valid: false,
-      message: 'Invalid username or password. Use the demo account details.',
-    };
+  if (!selectedAccount) {
+    return { valid: false, message: 'Invalid username or password.' };
   }
 
-  return { valid: true, redirect: selectedUser.redirect };
+  return { valid: true, redirect: selectedAccount.redirect };
+}
+
+function registerAccount({ username, fullName, password, confirmPassword, role, redirect, messageElement }) {
+  if (!username || !fullName || !password || !confirmPassword) {
+    setMessage(messageElement, 'Please complete all registration fields.', false);
+    return;
+  }
+
+  if (password.length < 6) {
+    setMessage(messageElement, 'Password must be at least 6 characters long.', false);
+    return;
+  }
+
+  if (password !== confirmPassword) {
+    setMessage(messageElement, 'Passwords do not match. Please try again.', false);
+    return;
+  }
+
+  const saved = saveAccount({ username, fullName, password, role, redirect });
+  if (!saved) {
+    setMessage(messageElement, 'That ID is already registered. Please use a different ID.', false);
+    return;
+  }
+
+  setMessage(messageElement, `${role} account created successfully. Redirecting to login...`, true);
+  setTimeout(() => {
+    window.location.href = '../index.html';
+  }, 600);
 }
 
 if (loginForm) {
@@ -68,53 +105,30 @@ if (signupForm) {
   signupForm.addEventListener('submit', function (event) {
     event.preventDefault();
 
-    const fullName = document.getElementById('fullname')?.value?.trim() ?? '';
-    const studentId = document.getElementById('student-id')?.value?.trim() ?? '';
-    const password = document.getElementById('password')?.value?.trim() ?? '';
-    const confirmPassword = document.getElementById('confirm-password')?.value?.trim() ?? '';
-
-    if (!fullName || !studentId || !password || !confirmPassword) {
-      setMessage(signupMessage, 'Please complete all student registration fields.', false);
-      return;
-    }
-
-    if (password.length < 6) {
-      setMessage(signupMessage, 'Password must be at least 6 characters long.', false);
-      return;
-    }
-
-    if (password !== confirmPassword) {
-      setMessage(signupMessage, 'Passwords do not match. Please try again.', false);
-      return;
-    }
-
-    setMessage(signupMessage, 'Student account created successfully. Redirecting to login...', true);
-    setTimeout(() => {
-      window.location.href = 'index.html';
-    }, 600);
+    registerAccount({
+      username: document.getElementById('student-id')?.value?.trim() ?? '',
+      fullName: document.getElementById('fullname')?.value?.trim() ?? '',
+      password: document.getElementById('password')?.value?.trim() ?? '',
+      confirmPassword: document.getElementById('confirm-password')?.value?.trim() ?? '',
+      role: 'Student',
+      redirect: 'student/student_dashboard.html',
+      messageElement: signupMessage,
+    });
   });
 }
 
 if (adminSignupForm) {
   adminSignupForm.addEventListener('submit', function (event) {
     event.preventDefault();
-    const adminId = document.getElementById('admin-id')?.value?.trim() ?? '';
-    const adminName = document.getElementById('admin-name')?.value?.trim() ?? '';
-    const password = document.getElementById('admin-password')?.value?.trim() ?? '';
-    const confirmPassword = document.getElementById('admin-confirm-password')?.value?.trim() ?? '';
-    if (!adminId || !adminName || !password || !confirmPassword) {
-      setMessage(adminSignupMessage, 'Please complete all admin registration fields.', false);
-      return;
-    }
-    if (password.length < 6) {
-      setMessage(adminSignupMessage, 'Password must be at least 6 characters long.', false);
-      return;
-    }
-    if (password !== confirmPassword) {
-      setMessage(adminSignupMessage, 'Passwords do not match. Please try again.', false);
-      return;
-    }
-    setMessage(adminSignupMessage, 'Admin account created successfully. Redirecting to login...', true);
-    setTimeout(() => { window.location.href = 'index.html'; }, 600);
+
+    registerAccount({
+      username: document.getElementById('admin-id')?.value?.trim() ?? '',
+      fullName: document.getElementById('admin-name')?.value?.trim() ?? '',
+      password: document.getElementById('admin-password')?.value?.trim() ?? '',
+      confirmPassword: document.getElementById('admin-confirm-password')?.value?.trim() ?? '',
+      role: 'Admin',
+      redirect: 'admin/admin_dashboard.html',
+      messageElement: adminSignupMessage,
+    });
   });
 }
