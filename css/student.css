@@ -43,6 +43,92 @@
   font-size: 45px;
 }
 
+.my-plot-sections {
+  display: grid;
+  gap: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.my-plot-card {
+  padding: 24px;
+}
+
+.card-heading-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.card-heading-row h2 {
+  font-size: 18px;
+}
+
+.note-label {
+  color: var(--text-light);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.teacher-notes-card blockquote {
+  margin: 18px 0 12px;
+  color: var(--text);
+  font-family: Georgia, serif;
+  font-size: 17px;
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.note-meta,
+.photo-caption {
+  color: var(--text-light);
+  font-size: 13px;
+}
+
+.note-meta span {
+  margin: 0 6px;
+}
+
+.plot-detail-list {
+  margin: 18px 0 0;
+}
+
+.plot-detail-list > div {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 14px 0;
+  border-top: 1px solid var(--border);
+}
+
+.plot-detail-list dt {
+  color: var(--text-light);
+}
+
+.plot-detail-list dd {
+  margin: 0;
+  font-weight: 600;
+  text-align: right;
+}
+
+.plot-photo {
+  display: block;
+  width: 100%;
+  height: 220px;
+  margin-top: 18px;
+  padding: 28px;
+  object-fit: contain;
+  background: #eef3eb;
+  border-radius: 8px;
+}
+
+.photo-caption {
+  margin-top: 10px;
+}
+
 /* Actions */
 
 .quick-actions {

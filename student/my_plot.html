@@ -53,96 +53,65 @@
           <p>Information about your assigned garden plot.</p>
         </div>
 
-        <div class="card">
-          <div class="plot-card">
-            <div class="plot-info">
-              <span class="badge badge-success"> Active </span>
-
-              <h2>Garden Plot A-12</h2>
-
-              <p class="plot-location">School Garden — Section A</p>
+        <div class="my-plot-sections">
+          <section class="card teacher-notes-card my-plot-card">
+            <div class="card-heading-row">
+              <h2>Teacher Notes</h2>
+              <span class="note-label">Latest note</span>
             </div>
 
-            <div class="plot-icon">🌻</div>
-          </div>
-        </div>
+            <blockquote>
+              “Remember to water every morning before class. Check the soil
+              moisture, and report any concerns to your teacher.”
+            </blockquote>
 
-        <br />
-
-        <div class="stats-grid">
-          <div class="stat-card">
-            <div class="stat-icon">📐</div>
-            <h3>3 × 4 m</h3>
-            <p>Plot Size</p>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">🌱</div>
-            <h3>Tomato</h3>
-            <p>Main Crop</p>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">📅</div>
-            <h3>June 10</h3>
-            <p>Assignment Date</p>
-          </div>
-
-          <div class="stat-card">
-            <div class="stat-icon">💧</div>
-            <h3>Good</h3>
-            <p>Current Condition</p>
-          </div>
-        </div>
-
-        <div class="admin-grid">
-          <section class="card">
-            <h2>Plot Information</h2>
-
-            <br />
-
-            <p><strong>Plot ID:</strong> A-12</p>
-
-            <p><strong>Assigned Student:</strong> Student User</p>
-
-            <p><strong>Location:</strong> School Garden, Section A</p>
-
-            <p><strong>Size:</strong> 3 meters × 4 meters</p>
-
-            <p><strong>Primary Crop:</strong> Tomato</p>
-
-            <p>
-              <strong>Status:</strong>
-              <span class="badge badge-success"> Active </span>
-            </p>
+            <p class="note-meta">Ms. Rivera <span aria-hidden="true">·</span> September 7, 2024</p>
           </section>
 
-          <section class="card">
-            <h2>Current Plants</h2>
+          <section class="card my-plot-card">
+            <h2>Assigned Plot Information</h2>
 
-            <br />
-
-            <div class="observation-item">
-              <div class="observation-meta">
-                <span>Tomato</span>
-                <span>Healthy</span>
+            <dl class="plot-detail-list">
+              <div>
+                <dt>Plot ID</dt>
+                <dd>A-12</dd>
               </div>
 
-              <h3>🍅 Tomato Plants</h3>
-
-              <p>Plants are growing well with healthy green leaves.</p>
-            </div>
-
-            <div class="observation-item">
-              <div class="observation-meta">
-                <span>Herbs</span>
-                <span>Growing</span>
+              <div>
+                <dt>Assigned Student</dt>
+                <dd>Student User</dd>
               </div>
 
-              <h3>🌿 Basil</h3>
+              <div>
+                <dt>Location</dt>
+                <dd>School Garden, Section A</dd>
+              </div>
 
-              <p>Young basil plants are developing new leaves.</p>
+              <div>
+                <dt>Primary Crop</dt>
+                <dd>Tomato</dd>
+              </div>
+
+              <div>
+                <dt>Status</dt>
+                <dd><span class="badge badge-success">Active</span></dd>
+              </div>
+            </dl>
+          </section>
+
+          <section class="card plot-photo-card my-plot-card">
+            <div class="card-heading-row">
+              <h2>Recent Plot Photo</h2>
+              <span class="note-label">September 9, 2024</span>
             </div>
+
+            <img
+              src="../images/garden-plot.svg"
+              alt="Recent photo of the assigned school garden plot"
+              class="plot-photo"
+            />
+
+            <p class="photo-caption">Plot A-12 · Tomatoes growing in Section A</p>
           </section>
         </div>
       </div>
