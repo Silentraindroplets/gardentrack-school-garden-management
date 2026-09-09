@@ -166,11 +166,13 @@ if (adminSignupForm) {
   });
 }
 
-const username = localStorage.getItem('gardenTrackerCurrentUser');
+const username = localStorage.getItem(currentUserStorageKey);
+const account = getAccounts().find((item) => item.username === username);
+const displayName = account?.fullName || username;
 
-if (username) {
+if (displayName) {
   document.querySelectorAll('[data-username]').forEach((element) => {
-    element.textContent = username;
+    element.textContent = displayName;
   });
 
   document.querySelectorAll('[data-username-initial]').forEach((element) => {

@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="../css/style.css" />
     <link rel="stylesheet" href="../css/nav.css" />
     <link rel="stylesheet" href="../css/student.css" />
+    <script src="../js/auth.js" defer></script>
   </head>
 
   <body>
@@ -29,7 +30,7 @@
 
         <div class="user-menu">
           <details>
-            <summary class="user-avatar" aria-label="Open user menu">S</summary>
+            <summary class="user-avatar" aria-label="Open user menu" data-username-initial>S</summary>
             <nav class="user-dropdown" aria-label="User menu">
               <a href="#profile">Profile</a>
               <a href="#account-settings">Account Settings</a>
@@ -38,7 +39,7 @@
           </details>
 
           <div class="user-info">
-            <strong>Student User</strong>
+            <strong data-username>Student User</strong>
             <span>Student</span>
           </div>
         </div>
@@ -79,7 +80,7 @@
 
               <div>
                 <dt>Assigned Student</dt>
-                <dd>Student User</dd>
+                <dd data-username>Student User</dd>
               </div>
 
               <div>
