@@ -7,6 +7,23 @@ const loginMessage = document.getElementById('loginMessage');
 const signupMessage = document.getElementById('signupMessage');
 const adminSignupMessage = document.getElementById('adminSignupMessage');
 
+const demoAccounts = [
+  {
+    username: 'student',
+    fullName: 'Student User',
+    password: 'student123',
+    role: 'Student',
+    redirect: 'student/student_dashboard.html',
+  },
+  {
+    username: 'admin',
+    fullName: 'Administrator',
+    password: 'admin123',
+    role: 'Admin',
+    redirect: 'admin/admin_dashboard.html',
+  },
+];
+
 function setMessage(element, message, isSuccess = false) {
   if (!element) return;
   element.textContent = message;
@@ -19,6 +36,18 @@ function getAccounts() {
     return Array.isArray(storedAccounts) ? storedAccounts : [];
   } catch (error) {
     return [];
+  }
+}
+
+function ensureDemoAccounts() {
+  const accounts = getAccounts();
+  const usernames = new Set(accounts.map((account) => account.username.toLowerCase()));
+  const missingAccounts = demoAccounts.filter(
+    (account) => !usernames.has(account.username.toLowerCase())
+  );
+
+  if (missingAccounts.length) {
+    localStorage.setItem(accountsStorageKey, JSON.stringify([...accounts, ...missingAccounts]));
   }
 }
 
@@ -55,6 +84,8 @@ function validateCredentials(username, password) {
 
   return { valid: true, redirect: selectedAccount.redirect, username: selectedAccount.username };
 }
+
+ensureDemoAccounts();
 
 function registerAccount({ username, fullName, password, confirmPassword, role, redirect, messageElement }) {
   if (!username || !fullName || !password || !confirmPassword) {

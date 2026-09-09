@@ -8,7 +8,7 @@ plots, student observations, and garden activity.
 Many school gardening programs still rely on paper journals, which makes it difficult to keep observation records organized, track plant growth consistently, monitor multiple garden plots, and review student participation.
 
 GardenTrack gives administrators a central place to manage students, assign
-plots, review observations, and view reports. Students can view their assigned
+plots, and review observations. Students can view their assigned
 plot, submit daily observations, and review their observation logs.
 
 ## The Problem
@@ -43,7 +43,6 @@ plot, submit daily observations, and review their observation logs.
 - Admin dashboard
 - Student and plot management
 - Student observation review
-- Reports and analytics
 
 ### Shared Features
 - Responsive navigation
@@ -83,7 +82,6 @@ school-garden-management/
 │   ├── admin_dashboard.html    # Admin dashboard
 │   ├── manage_plots.html       # Plot management
 │   ├── manage_students.html    # Student management
-│   ├── reports.html            # Reports and analytics
 │   ├── student_observations.html # Observation review
 │   └── admin_signup.html       # Admin registration
 ├── css/
@@ -105,6 +103,11 @@ school-garden-management/
 
 Open `index.html` in a browser, or serve the project directory with any local
 static web server. No package installation or build step is required.
+
+### Demo Accounts
+
+- Student: `student` / `student123`
+- Admin: `admin` / `admin123`
 
 
 ## Team

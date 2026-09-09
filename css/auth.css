@@ -210,6 +210,15 @@
   font-size: 0.9rem;
 }
 
+.demo-credentials {
+  margin: -12px 0 20px;
+  padding: 10px 12px;
+  border-left: 3px solid var(--primary);
+  background: var(--primary-light);
+  color: var(--muted);
+  font-size: 12px;
+}
+
 .login-card form {
   display: flex;
   flex-direction: column;
