@@ -349,6 +349,14 @@
   margin-bottom: 8px;
 }
 
+.log-view-button {
+  display: block;
+  width: fit-content;
+  margin-top: 16px;
+  margin-left: auto;
+  padding: 7px 14px;
+}
+
 /* Responsive */
 
 @media (max-width: 750px) {

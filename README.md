@@ -1,14 +1,15 @@
-School Garden Management Website
+# GardenTrack School Garden Management
 
-A website designed to help schools manage their gardening programs digitally. SGMW allows teachers to assign garden plots to students, while enabling students to record plant observations and monitor growth over time.
-
-**NOTE: Everything in this document is provisional!**
+A static HTML, CSS, and vanilla JavaScript website for managing school garden
+plots, student observations, and garden activity.
 
 ## Project Overview
 
 Many school gardening programs still rely on paper journals, which makes it difficult to keep observation records organized, track plant growth consistently, monitor multiple garden plots, and review student participation.
 
-SGMW solves this by giving teachers a single place to manage and assign garden plots, keep all garden data stored together for easy monitoring, and let students record their observations digitally.
+GardenTrack gives administrators a central place to manage students, assign
+plots, review observations, and view reports. Students can view their assigned
+plot, submit daily observations, and review their observation logs.
 
 ## The Problem
 
@@ -31,21 +32,23 @@ SGMW solves this by giving teachers a single place to manage and assign garden p
 
 ## Features
 
-### Static Features (HTML & CSS)
-- Login Page
-- Student Dashboard
-- My Garden Plot Page
-- Observation History
-- Admin Dashboard
-- Responsive Navigation
+### Student Features
+- Student dashboard
+- Assigned plot information
+- Daily observation form
+- Observation logs
+- Fast-access dashboard links
 
-### Dynamic Features (JavaScript)
-- User Login Validation
-- Add Observation
-- Display Observation History
-- Assign Garden Plot
-- Update Plant Status
-- Logout Functionality
+### Admin Features
+- Admin dashboard
+- Student and plot management
+- Student observation review
+- Reports and analytics
+
+### Shared Features
+- Responsive navigation
+- Login and signup validation
+- Local browser storage for account data
 
 ## Tech Stack
 
@@ -59,51 +62,49 @@ SGMW solves this by giving teachers a single place to manage and assign garden p
 - CSS Grid
 - Responsive Design
 
-**JavaScript Functions**
-- Form Validation
-- CRUD Operations
-- Dynamic Table Updates
-- Event Listeners
+**JavaScript**
+- Form validation and authentication
+- Dashboard interactions
+- Plot management interactions
+- Local storage account handling
 
-## Folder Structure (Subject to CHANGE!)
+## Folder Structure
 
-```
-greentrack/
-├── index.html                  # Login page (entry point)
-├── signup.html                  # Signup page (entry point)
-│
+```text
+school-garden-management/
+├── index.html                  # Login page and entry point
 ├── student/
-│   ├── dashboard.html          # Student Dashboard
-│   ├── my-plot.html            # My Garden Plot page
-│   └── observations.html       # Observation History page
-│   └── plot_journal.html       # A diary log of assigned plot (not sure if this is necessary)
-│
+│   ├── student_dashboard.html  # Student dashboard
+│   ├── my_plot.html            # Assigned plot information
+│   ├── observations.html       # Daily observation form
+│   ├── observation_log.html    # Observation logs
+│   └── student_signup.html     # Student registration
 ├── admin/
-│   ├── dashboard.html          # Admin Dashboard
-│   └── manage_plots.html       # Assign Garden Plot (admin-side)
-│   └── reports.html       # Generate reports (admin-side)
-│   └── student_observations.html # Monitor observations submitted by students    (admin-side)
-│   └── manage_students.html       # Manage students (admin-side)
+│   ├── admin_dashboard.html    # Admin dashboard
+│   ├── manage_plots.html       # Plot management
+│   ├── manage_students.html    # Student management
+│   ├── reports.html            # Reports and analytics
+│   ├── student_observations.html # Observation review
+│   └── admin_signup.html       # Admin registration
 ├── css/
-│   ├── style.css               # Global styles, resets, variables
-│   ├── nav.css                 # Responsive navigation
-│   ├── login.css
-│   ├── student.css
-│   └── admin.css
-│
+│   ├── style.css               # Global styles and variables
+│   ├── nav.css                 # Navigation styles
+│   ├── student.css             # Student-page styles
+│   ├── admin.css               # Admin-page styles
+│   └── auth.css                # Authentication-page styles
 ├── js/
-│   ├── auth.js                 # Login validation + logout
-│   ├── observations.js         # Add / display observation history
-│   ├── plots.js                # Assign garden plot / update plant status
-│   ├── nav.js                  # Responsive nav toggle behavior
-│   └── data.js                 # Shared mock data / localStorage helpers (CRUD)
-│
-├── assets/
-│   ├── images/                 # Logos, icons, plant photos
-│   └── fonts/                  # Custom fonts, if any
-│
+│   ├── auth.js                 # Login, signup, and account storage
+│   ├── dashboard.js             # Dashboard interactions
+│   └── manage_plots.js          # Plot management interactions
+├── images/                     # Logos and interface icons
+├── fonts/                      # Custom fonts
 └── README.md
 ```
+
+## Running the Project
+
+Open `index.html` in a browser, or serve the project directory with any local
+static web server. No package installation or build step is required.
 
 
 ## Team
