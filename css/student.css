@@ -171,15 +171,44 @@
 /* Observations */
 
 .observation-form-card {
-  max-width: 900px;
+  width: 100%;
+  padding: 28px;
 }
 
 .observation-form-card h2 {
-  margin-bottom: 2px;
+  margin: 4px 0 2px;
+  font-size: 22px;
+}
+
+.observation-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 24px;
+  padding-bottom: 22px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--border);
+}
+
+.observation-eyebrow {
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.observation-plot-badge {
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: var(--primary-light);
+  color: var(--primary);
+  font-size: 12px;
+  font-weight: 700;
 }
 
 .observation-form-subtitle {
-  margin-bottom: 18px;
+  margin: 0;
   color: var(--text-light);
 }
 
@@ -250,6 +279,17 @@
   width: 100%;
   border-radius: 3px;
   text-transform: uppercase;
+}
+
+@media (max-width: 600px) {
+  .observation-form-card {
+    padding: 20px;
+  }
+
+  .observation-card-header {
+    flex-direction: column;
+    gap: 12px;
+  }
 }
 
 .observation-item {
