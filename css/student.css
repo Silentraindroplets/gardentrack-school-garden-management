@@ -46,8 +46,7 @@
 .my-plot-sections {
   display: grid;
   gap: 18px;
-  max-width: 900px;
-  margin: 0 auto;
+  width: 100%;
 }
 
 .my-plot-card {
